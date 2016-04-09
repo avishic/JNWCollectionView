@@ -211,6 +211,7 @@ static void JNWCollectionViewCommonInit(JNWCollectionView *collectionView) {
         
         if (reusableItem != nil) {
             [reusableItems removeLastObject];
+            reusableItem.hidden = NO;
             return reusableItem;
         }
     }
