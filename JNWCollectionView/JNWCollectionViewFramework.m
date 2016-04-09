@@ -211,7 +211,6 @@ static void JNWCollectionViewCommonInit(JNWCollectionView *collectionView) {
         
         if (reusableItem != nil) {
             [reusableItems removeLastObject];
-            reusableItem.hidden = NO;
             return reusableItem;
         }
     }
@@ -720,9 +719,8 @@ static void JNWCollectionViewCommonInit(JNWCollectionView *collectionView) {
         
         if (cell.superview == nil) {
             [self.documentView addSubview:cell];
-        } else {
-            [cell setHidden:NO];
         }
+        [cell setHidden:NO];
         
         if ([self.selectedIndexes containsObject:indexPath])
             cell.selected = YES;
